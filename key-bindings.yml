@@ -1,0 +1,66 @@
+key_bindings:
+  global:
+    normal_mode:
+      "<leader>pv": "vim.cmd.Ex -> Return to the [p]roject [v]iew buffer"
+      "<C-d>": "<C-d>zz -> Jump down half page keeping cursor in the middle of the file"
+      "<C-U>": <C-u>zz -> Jump up half page keeping cursor in the middle of the file"
+      "J": "mzJ`z -> Join the current line with the next line"
+      "<leader>yf": "gg0vG$y -> Yank the entire file"
+      "<leader>af": "gg0vG$ -> Select the entire file"
+      "<leader>=": "gg0vG$= -> Format the entire file"
+      "n": "nzzzv -> Center the screen after jumping to the next search match"
+      "N": "Nzzzv -> Center the screen after jumping to the previous search match"
+      "<leader>w": "<C-w> -> Enter window mode"
+
+    visual_mode:
+      "J": ":m '>+1<CR>gv=gv -> Move the selected line up a line"
+      "K": ":m '<-2<CR>gv=gv -> Move the selected line down a line"
+
+    x_mode:
+      "<leader>p": '"_dp -> Paste while keeping the pasted item in the register'
+
+  fugitive:
+    normal_mode:
+      "<leader>gs": "vim.cmd.Git -> Opens the Git status of the project"
+
+  harpoon:
+    normal_mode:
+      "<leader>ha": "mark.add_file -> Adds a file to my harpoon list"
+      "<leader>hf": "ui.toggle_quick_menu -> Opens the harpoon files buffer"
+      "<leader>h[n]": "function() ui.nav_file(n) end -> Quick jumps to the files in the harpoon files with the index [n] (1-9)"
+
+  LSP:
+    normal_mode:
+      "K": "vim.lsp.buf.hover -> Show lsp hover information"
+      "gd": "vim.lsp.buf.definition -> Go to lsp definition"
+      "gD": "vim.lsp.buf.declaration -> Go to lsp declaration"
+      "gr": "vim.lsp.buf.references -> Show lsp references"
+      "<leader>ca": "vim.lsp.buf.code_action -> Enter a code action"
+
+    visual_mode:
+      "<leader>ca": "vim.lsp.buf.code_action -> Enter a code action"
+
+  neotree:
+    normal_mode:
+      "<leader>n": ":Neotree filesystem toggle right<CR> -> Toggles the file tree explorer on the right hand side"
+
+  telescope:
+    normal_mode:
+      "<leader>sh": "builtin.help_tags -> [S]earch help"
+      "<leader>sk": "builtin.keymaps -> [S]earch [K]eymaps"
+      "<leader>sf": "builtin.find_files -> [S]earch [F]iles"
+      "<leader>sG": "builtin.git_files -> [S]earch [G]it files"
+      "<leader>ss": "builtin.builtin -> [S]earch [S]elect Telescope"
+      "<leader>sw": "builtin.grep_string -> [S]earch current [W]ord"
+      "<leader>sg": "builtin.live_grep -> [S]earch by [G]rep"
+      "<leader>sd": "builtin.diagnostics -> [S]earch by [D]iagnostic"
+      "<leader>sr": "builtin.resume -> [S]earch [R]esume"
+      "<leader>s.": "builtin.oldfiles -> [S]earch Recent Files ('.' for repeat)"
+      "<leader><leader>": "builtin.buffers -> Find existing buffers"
+      "<leader>/": "function()... -> [/] Fuzzy searches the current buffer"
+      "<leader>s/": "function()... -> [S]earch [/] in open files"
+      "<leader>sn": "function()... -> [S]search [N]eovim files"
+
+  undotree:
+    normal_mode:
+      "<leader>ut": "vim.cmd.UndotreeToggle -> toggles the undotree window"
